@@ -1,0 +1,55 @@
+XML:
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "ex3a.xsl"?>
+<class>
+<employee id = "001">
+<firstname>ria</firstname>
+<lastname>regi</lastname>
+<nickname>chashu</nickname>
+<salary>30000</salary>
+</employee>
+<employee id = "024">
+<firstname>shan</firstname>
+<lastname>priyu</lastname>
+<nickname>rumu</nickname>
+<salary>25000</salary>
+</employee>
+<employee id = "056">
+<firstname>hemu</firstname>
+<lastname>preethu</lastname>
+<nickname>bhavu</nickname>
+<salary>10000</salary>
+</employee>
+</class>
+XSL:
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsl:stylesheet version = "1.0"
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
+<xsl:template match = "/">
+<html>
+<body>
+<h2>Student</h2>
+<table border = "1">
+<tr bgcolor = "green">
+<th>ID</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Nick Name</th>
+<th>Salary</th>
+</tr>
+<xsl:for-each select="class/employee">
+<tr>
+<td>
+<xsl:value-of select = "@id"/>
+</td>
+<td><xsl:value-of select = "firstname"/></td>
+<td><xsl:value-of select = "lastname"/></td>
+<td><xsl:value-of select = "nickname"/></td>
+<td><xsl:value-of select = "salary"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
