@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="ex2a.css"?>
+<!DOCTYPE employee SYSTEM "ex2b.dtd">
+<employee>
+<heading>LIST OF STUDENTS</heading>
+<br />
+<br><text1>regi</text1><br/>
+<br><text2>ria</text2><br/>
+<text3>priya</text3>
+<text4>shanu</text4>
+
+<heading>SELECTED CANDIDATES</heading>
+<text1>regi</text1>
+<text2>ria</text2>
+</employee>
+CSS:
+employee
+{
+background-color: thistle;
+}
+text1,text2,text3,text4
+{
+font-size:20px;
+display:block;
+color: tomato;
+margin-left: 50px;
+}
+heading
+{
+font-size:35px;
+display:block;
+color:black;
+}
+DTD:
+<!ELEMENT employee (text1,text2,text3,text4)>
+<!ELEMENT text1 (#PCDATA)>
+<!ELEMENT text2 (#PCDATA)>
+<!ELEMENT text3 (#PCDATA)>
+<!ELEMENT text4 (#PCDATA)>
